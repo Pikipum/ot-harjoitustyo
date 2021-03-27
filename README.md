@@ -1,6 +1,6 @@
 <h1>This is my initial commit for the project.</h1>
 
-Here are my exercises for the **first week**.
+Here are my exercises.
 
 <h2>Week 1<h2>
 
@@ -8,7 +8,7 @@ Here are my exercises for the **first week**.
 
 [komentorivi.txt](https://github.com/Pikipum/ot-harjoitustyo/blob/main/laskarit/viikko1/komentorivi.txt)
 
-Exercises for the **second week**
+
 
 <h2>Week 2<h2>
 
