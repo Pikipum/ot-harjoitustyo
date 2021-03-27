@@ -70,19 +70,8 @@ class TestKassapaate(unittest.TestCase):
         maksukortti = Maksukortti(500)
         self.kassapaate.syo_edullisesti_kortilla(maksukortti)
         self.assertEqual(self.kassapaate.kassassa_rahaa, 100000)
-  #  def test_(self):
-  #      self.assertEqual(str(self.kassapaate), )
 
-  #  def test_(self):
-  #      self.assertEqual(str(self.kassapaate), )
-
-  #  def test_(self):
-  #      self.assertEqual(str(self.kassapaate), )
-
- #   seuraavissa testeissä tarvitaan myös Maksukorttia jonka oletetaan toimivan oikein
- #   Korttiosto toimii sekä edullisten että maukkaiden lounaiden osalta
- #       Jos kortilla on tarpeeksi rahaa, veloitetaan summa kortilta ja palautetaan True
- #       Jos kortilla on tarpeeksi rahaa, myytyjen lounaiden määrä kasvaa
- #       Jos kortilla ei ole tarpeeksi rahaa, kortin rahamäärä ei muutu, myytyjen lounaiden määrä muuttumaton ja palautetaan False
- #       Kassassa oleva rahamäärä ei muutu kortilla ostettaessa
- #   Kortille rahaa ladattaessa kortin saldo muuttuu ja kassassa oleva rahamäärä kasvaa ladatulla summalla
+    def test_kortille_ei_voi_ladata_negatiivista_summaa(self):
+        maksukortti = Maksukortti(0)
+        self.kassapaate.lataa_rahaa_kortille(maksukortti, -100)
+        self.assertEqual(maksukortti.saldo, 0)
