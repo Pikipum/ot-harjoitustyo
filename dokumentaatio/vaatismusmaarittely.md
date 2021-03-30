@@ -6,7 +6,7 @@ Olen rakentamassa yksinkertaista shakkipeliä.
 
 ### Toiminnallisuudet:
 
-Moninpeli: Peliä ohjataan yhdellä tietokoneella, mutta ohjelma kertoo, kumman vuoro on. Peliä voi siis pelata
+Moninpeli: Peliä ohjataan yhdellä tietokoneella, mutta ohjelma kertoo, kumman pelaajan (mustan vai valkoisen) vuoro on. Peliä voi siis pelata
 itseään vastaan, tai antaa lähellä olevan henkilön ohjata nappuloita omalla vuorollaan. 
 
 Eri pelimuodot: Tavallinen shakkipeli ilman aikarajaa sekä nopeatempoinen Blitz jossa molemmilla pelaajilla vain vähän
