@@ -15,3 +15,8 @@ Here are my exercises.
 [coverage_report.png](https://github.com/Pikipum/ot-harjoitustyo/blob/main/laskarit/viikko2/coverage_report.png)
 
 
+<h2> Chess game project <h2>
+ 
+[vaatimusmäärittely](dokumentaatio/vaatimusmaarittely.md)
+
+[tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
