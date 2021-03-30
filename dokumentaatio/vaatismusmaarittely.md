@@ -17,6 +17,14 @@ lisäksi keskenjääneen pelin voi tallentaa ja jatkaa myöhemmin lataamalla pel
 
 Graafinen käyttöliittymä, jossa näkyy pelilauta ja -nappulat.
 
+      -Sovellus koostuu kolmesta näkymästä:
+      
+      -Aloitusruutu, jossa "Play" ja "Load game" vaihtoehdot
+      
+      -"Play" nappula vie itse peliin, jossa näkyy lauta ja nappulat.
+      
+      -"Load Game" avaa uuden näkymän, jossa on lista tallennetuista peleistä, jotka voidaan ladata.
+
 
 ### Laajentavat toiminnallisuudet perusversion valmistuttua:
 
