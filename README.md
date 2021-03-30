@@ -17,6 +17,6 @@ Here are my exercises.
 
 <h2> Chess game project <h2>
  
-[vaatimusmäärittely](dokumentaatio/vaatimusmaarittely.md)
+[vaatimusmäärittely](dokumentaatio/vaatismusmaarittely.md)
 
 [tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
