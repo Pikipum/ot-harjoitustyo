@@ -56,7 +56,7 @@ while not exit:
     #Game code
         if event.type == pygame.MOUSEBUTTONDOWN:
             if b_pawn.get_rect().collidepoint(event.pos):
-                print("fuck off")
+                print("clicked pawn")
 
     screen.fill(gray_color)
 
