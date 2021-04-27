@@ -6,7 +6,7 @@ class Piece():
         self.name = name
         self.position_y = position_y
         self.position_x = position_x
-        self.image = pygame.image.load(os.path.join("src/images/chess_pawn_60.png")).convert_alpha()
+        self.image = pygame.image.load(os.path.join("chess_pawn_60.png")).convert_alpha()
         self.rect = self.image.get_rect()
         self.rect.x = self.position_x
         self.rect.y = self.position_y
