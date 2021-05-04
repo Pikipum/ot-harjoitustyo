@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "chessgame"
+version = "0.1.0"
+description = "a simple chess game"
+authors = ["markus <markus.tervonen@hotmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pygame = "^2.0.1"
+invoke = "^1.5.0"
+pylint = "^2.8.2"
+coverage = "^5.5"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
