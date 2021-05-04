@@ -29,3 +29,10 @@ Run pylint tests with:
 ```
 poetry run invoke lint
 ```
+
+To be done:
+Program the rules
+Add player turns
+Add unique art to each piece
+Add functionality to save a game
+Add a main menu and settings
