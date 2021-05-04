@@ -13,6 +13,22 @@ def fill(grid, length):
     piece.Piece("BP", 60, 60), piece.Piece("BP", 60, 60), 
     piece.Piece("BP", 60, 60), piece.Piece("BP", 60, 60), 
     piece.Piece("BP", 60, 60)]
+    grid[2] = [piece.Piece("None", 60, 60), piece.Piece("None", 60, 60), 
+    piece.Piece("None", 60, 60), piece.Piece("None", 60, 60), 
+    piece.Piece("None", 60, 60), piece.Piece("None", 60, 60), 
+    piece.Piece("None", 60, 60), piece.Piece("None", 60, 60)]
+    grid[3] = [piece.Piece("None", 60, 60), piece.Piece("None", 60, 60), 
+    piece.Piece("None", 60, 60), piece.Piece("None", 60, 60), 
+    piece.Piece("None", 60, 60), piece.Piece("None", 60, 60), 
+    piece.Piece("None", 60, 60), piece.Piece("None", 60, 60)]
+    grid[4] = [piece.Piece("None", 60, 60), piece.Piece("None", 60, 60), 
+    piece.Piece("None", 60, 60), piece.Piece("None", 60, 60), 
+    piece.Piece("None", 60, 60), piece.Piece("None", 60, 60), 
+    piece.Piece("None", 60, 60), piece.Piece("None", 60, 60)]
+    grid[5] = [piece.Piece("None", 60, 60), piece.Piece("None", 60, 60), 
+    piece.Piece("None", 60, 60), piece.Piece("None", 60, 60), 
+    piece.Piece("None", 60, 60), piece.Piece("None", 60, 60), 
+    piece.Piece("None", 60, 60), piece.Piece("None", 60, 60)]
     grid[6] = [piece.Piece("WP", 60, 60), 
     piece.Piece("WP", 60, 60), piece.Piece("WP", 60, 60), 
     piece.Piece("WP", 60, 60), piece.Piece("WP", 60, 60), 

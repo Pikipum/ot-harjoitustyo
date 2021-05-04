@@ -6,7 +6,10 @@ class Piece():
         self.name = name
         self.position_y = position_y
         self.position_x = position_x
-        self.image = pygame.image.load(os.path.join("images/chess_pawn_60.png")).convert_alpha()
+        if name == "None":
+            self.image = pygame.image.load(os.path.join("images/blank.png")).convert_alpha()
+        else:
+            self.image = pygame.image.load(os.path.join("images/chess_pawn_60.png")).convert_alpha()
         self.rect = self.image.get_rect()
         self.rect.x = self.position_x
         self.rect.y = self.position_y
@@ -22,3 +25,6 @@ class Piece():
 
     def set_rect(self, x, y, s, w):
         self.rect = pygame.Rect(x, y, s, w)
+    
+    def set_name(self, name):
+        self.name = name

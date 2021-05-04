@@ -21,7 +21,7 @@ boardLength = 8
 board_grid = [[0 for x in range(0, boardLength)] for y in range(0, boardLength)] #Create an 8x8 grid with zeroes
 
 board_grid = fill_board.fill(board_grid, boardLength) #Initialize the board with the pieces
-
+square_size = 60
 def drawboard():
     size = 60 # Square size in pixels
     
@@ -37,7 +37,8 @@ def drawboard():
             if board_grid[i-1][z-1] != 0: #Check if a piece is on this rectangle
                 piece = board_grid[i-1][z-1]
                 board_grid[i-1][z-1].set_rect(size*z, size*i, size, size)
-                screen.blit(piece.image, piece.rect) #Draw the correct piece on the rectangle
+                if board_grid[i-1][z-1] != str("None"):
+                    screen.blit(piece.image, piece.rect) #Draw the correct piece on the rectangle
                 
             white +=1
         white-=1
@@ -46,7 +47,9 @@ def drawboard():
     pygame.display.flip() #Update the display
 
 
-
+selected = None
+pos_x = None
+pos_y = None
 while not exit:
     drawboard() #Draw the board
     for event in pygame.event.get():
@@ -54,13 +57,21 @@ while not exit:
             exit = True
 
     #Game code
+    
         if event.type == pygame.MOUSEBUTTONDOWN:
-            selected = None
-            for x in range(0,7):
-                for y in range(0,7):
-                    if board_grid[x][y] != 0:
-                        if board_grid[x][y].get_rect().collidepoint(event.pos):
-                            board_grid[x+1][y] = board_grid[x][y]
+            for x in range(1,9):
+                for y in range(1,9):
+                        if board_grid[x-1][y-1].get_rect().collidepoint(event.pos):
+                            selected = board_grid[x-1][y-1]
+                            print(selected)
+                            pos_x = x
+                            pos_y = y
+        if event.type == pygame.MOUSEBUTTONUP:
+            for x in range(1,9):
+                for y in range(1,9):
+                        if board_grid[x-1][y-1].get_rect().collidepoint(event.pos):
+                            board_grid[x-1][y-1] = selected
+                            board_grid[pos_x-1][pos_y-1] = piece.Piece("None", 60, 60)
                         
     clock.tick(60)
 
