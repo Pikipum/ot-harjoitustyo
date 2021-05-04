@@ -21,7 +21,7 @@ Run the tests with:
 ```
 poetry run invoke test
 ```
-Run the tests with poetry with:
+Create the coverage report with:
 ```
 poetry run invoke coverage-report
 ```
