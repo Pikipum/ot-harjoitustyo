@@ -10,7 +10,7 @@
 [tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
 
  
-<h2> Instructions: <h2>
+<h2> Instructions: </h2>
 
 Run the program with:
 ```
