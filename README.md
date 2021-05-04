@@ -9,16 +9,23 @@
 
 [tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
 
-
-<h2>Week 5<h2> 
  
- 
-Currently running with poetry is not supported. To run the program you will need to move to the source folder:
+<h2> Instructions: <h2>
+
+Run the program with:
 ```
-cd ot-harjoitustyo/src/
+poetry run invoke start
 ```
 
-and run the program with Python:
+Run the tests with:
 ```
-python3 chessgame.py
+poetry run invoke test
+```
+Run the tests with poetry with:
+```
+poetry run invoke coverage-report
+```
+Run pylint tests with:
+```
+poetry run invoke lint
 ```
