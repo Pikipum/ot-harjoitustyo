@@ -48,8 +48,10 @@ def drawboard():
 
 
 selected = None
-pos_x = None
-pos_y = None
+selected_pos_x = None
+selected_pos_y = None
+destination_pos_x = None
+destination_pos_y = None
 while not exit:
     drawboard() #Draw the board
     for event in pygame.event.get():
@@ -64,15 +66,17 @@ while not exit:
                         if board_grid[x-1][y-1].get_rect().collidepoint(event.pos): #Check if the click lined up with a piece
                             selected = board_grid[x-1][y-1] #Save selected piece
                             print(selected)
-                            pos_x = x
-                            pos_y = y
+                            selected_pos_x = x #Save the x and y coordinates of the selected piece
+                            selected_pos_y = y
         if event.type == pygame.MOUSEBUTTONUP: #Releasing mouse button will move the piece
             for x in range(1,9): #Go through the board
                 for y in range(1,9):
                         if board_grid[x-1][y-1].get_rect().collidepoint(event.pos):  #Check if the click lined up with a piece
-                            if move_piece.can_move(selected, board_grid[x-1][y-1]): #Check if move is valid
+                            destination_pos_x = x
+                            destination_pos_y = y
+                            if move_piece.can_move(board_grid, selected_pos_x, selected_pos_y, destination_pos_x, destination_pos_y): #Check if move is valid
                                 board_grid[x-1][y-1] = selected #Execute the move
-                                board_grid[pos_x-1][pos_y-1] = piece.Piece("None", 60, 60) #Replace old position with a blank
+                                board_grid[selected_pos_x-1][selected_pos_y-1] = piece.Piece("None", 60, 60) #Replace old position with a blank
                             else:
                                 continue
                         
