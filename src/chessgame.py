@@ -1,5 +1,5 @@
 import pygame, sys, os
-import fill_board, load_images, piece
+import fill_board, load_images, piece, move_piece
 
 black_color = (0, 0, 0)
 white_color = (255, 255, 255)
@@ -58,20 +58,23 @@ while not exit:
 
     #Game code
     
-        if event.type == pygame.MOUSEBUTTONDOWN:
-            for x in range(1,9):
+        if event.type == pygame.MOUSEBUTTONDOWN: #Clicking down selects a piece, dragging it moves it.
+            for x in range(1,9): #Go through the board
                 for y in range(1,9):
-                        if board_grid[x-1][y-1].get_rect().collidepoint(event.pos):
-                            selected = board_grid[x-1][y-1]
+                        if board_grid[x-1][y-1].get_rect().collidepoint(event.pos): #Check if the click lined up with a piece
+                            selected = board_grid[x-1][y-1] #Save selected piece
                             print(selected)
                             pos_x = x
                             pos_y = y
-        if event.type == pygame.MOUSEBUTTONUP:
-            for x in range(1,9):
+        if event.type == pygame.MOUSEBUTTONUP: #Releasing mouse button will move the piece
+            for x in range(1,9): #Go through the board
                 for y in range(1,9):
-                        if board_grid[x-1][y-1].get_rect().collidepoint(event.pos):
-                            board_grid[x-1][y-1] = selected
-                            board_grid[pos_x-1][pos_y-1] = piece.Piece("None", 60, 60)
+                        if board_grid[x-1][y-1].get_rect().collidepoint(event.pos):  #Check if the click lined up with a piece
+                            if move_piece.can_move(selected, board_grid[x-1][y-1]): #Check if move is valid
+                                board_grid[x-1][y-1] = selected #Execute the move
+                                board_grid[pos_x-1][pos_y-1] = piece.Piece("None", 60, 60) #Replace old position with a blank
+                            else:
+                                continue
                         
     clock.tick(60)
 
