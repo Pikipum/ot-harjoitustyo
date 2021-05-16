@@ -9,7 +9,7 @@ class Piece():
         if name == "None":
             self.image = pygame.image.load(os.path.join("images/blank.png")).convert_alpha()
         else:
-            self.image = pygame.image.load(os.path.join("images/chess_pawn_60.png")).convert_alpha()
+            self.image = pygame.image.load(os.path.join("images/" + self.name + ".png")).convert_alpha()
         self.rect = self.image.get_rect()
         self.rect.x = self.position_x
         self.rect.y = self.position_y
