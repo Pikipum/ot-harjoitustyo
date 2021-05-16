@@ -47,11 +47,14 @@ def drawboard():
     pygame.display.flip() #Update the display
 
 
+#Variables used for tracking moves
 selected = None
 selected_pos_x = None
 selected_pos_y = None
 destination_pos_x = None
 destination_pos_y = None
+whites_turn = True #White gets the first move
+
 while not exit:
     drawboard() #Draw the board
     for event in pygame.event.get():
@@ -64,10 +67,18 @@ while not exit:
             for x in range(1,9): #Go through the board
                 for y in range(1,9):
                         if board_grid[x-1][y-1].get_rect().collidepoint(event.pos): #Check if the click lined up with a piece
-                            selected = board_grid[x-1][y-1] #Save selected piece
-                            print(selected)
-                            selected_pos_x = x #Save the x and y coordinates of the selected piece
-                            selected_pos_y = y
+                            if whites_turn and board_grid[x-1][y-1].name.startswith("W"):
+                                selected = board_grid[x-1][y-1] #Save selected piece
+                                print(selected)
+                                selected_pos_x = x #Save the x and y coordinates of the selected piece
+                                selected_pos_y = y
+                                whites_turn = False
+                            elif whites_turn == False and board_grid[x-1][y-1].name.startswith("B"):
+                                selected = board_grid[x-1][y-1] #Save selected piece
+                                print(selected)
+                                selected_pos_x = x #Save the x and y coordinates of the selected piece
+                                selected_pos_y = y
+                                whites_turn = True
         if event.type == pygame.MOUSEBUTTONUP: #Releasing mouse button will move the piece
             for x in range(1,9): #Go through the board
                 for y in range(1,9):
