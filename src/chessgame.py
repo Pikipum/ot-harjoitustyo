@@ -22,6 +22,16 @@ board_grid = [[0 for x in range(0, boardLength)] for y in range(0, boardLength)]
 
 board_grid = fill_board.fill(board_grid, boardLength) #Initialize the board with the pieces
 square_size = 60
+
+
+
+new = pygame.image.load(os.path.join("images/new_game.png")).convert_alpha()
+new_rect = pygame.Rect(0, 0, 120, 60)
+load = pygame.image.load(os.path.join("images/load_game.png")).convert_alpha()
+load_rect = pygame.Rect(200, 0, 120, 60)
+quit = pygame.image.load(os.path.join("images/quit.png")).convert_alpha()
+quit_rect = pygame.Rect(400, 0, 120, 60)
+
 def drawboard():
     size = 60 # Square size in pixels
     
@@ -43,6 +53,9 @@ def drawboard():
             white +=1
         white-=1
     pygame.draw.rect(screen,black_color,[size,size,boardLength*size,boardLength*size],1) #Draws a border
+    screen.blit(new, [0, 0, 60, 120])
+    screen.blit(load, [200, 0, 60, 120])
+    screen.blit(quit, [400, 0, 60, 120])
     pygame.display.update()
     pygame.display.flip() #Update the display
 
@@ -64,6 +77,14 @@ while not exit:
     #Game code
     
         if event.type == pygame.MOUSEBUTTONDOWN: #Clicking down selects a piece, dragging it moves it.
+            if new_rect.collidepoint(event.pos):
+                board_grid = fill_board.fill(board_grid, boardLength) #If clicked new game, format the grid again
+                whites_turn = True
+                continue
+            if load_rect.collidepoint(event.pos):
+                continue
+            if quit_rect.collidepoint(event.pos):
+                exit = True
             for x in range(1,9): #Go through the board
                 for y in range(1,9):
                         if board_grid[x-1][y-1].get_rect().collidepoint(event.pos): #Check if the click lined up with a piece
