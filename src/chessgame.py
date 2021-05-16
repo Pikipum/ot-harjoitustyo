@@ -1,5 +1,5 @@
 import pygame, sys, os
-import fill_board, load_images, piece, move_piece
+import fill_board, piece, move_piece
 
 black_color = (0, 0, 0)
 white_color = (255, 255, 255)
@@ -90,13 +90,11 @@ while not exit:
                         if board_grid[x-1][y-1].get_rect().collidepoint(event.pos): #Check if the click lined up with a piece
                             if whites_turn and board_grid[x-1][y-1].name.startswith("W"):
                                 selected = board_grid[x-1][y-1] #Save selected piece
-                                print(selected)
                                 selected_pos_x = x #Save the x and y coordinates of the selected piece
                                 selected_pos_y = y
                                 whites_turn = False
                             elif whites_turn == False and board_grid[x-1][y-1].name.startswith("B"):
                                 selected = board_grid[x-1][y-1] #Save selected piece
-                                print(selected)
                                 selected_pos_x = x #Save the x and y coordinates of the selected piece
                                 selected_pos_y = y
                                 whites_turn = True
