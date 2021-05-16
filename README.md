@@ -1,9 +1,8 @@
-<h1>Chess game.</h1>
+<h1>Chess game</h1>
 
+This is a simple chess game. Users can play against themselves, or invite a friend over for a local game. To learn the rules of the game, click the link below. 
 
-
-
-<h2> I am building a simple chess game. Look at the following links for more information. <h2>
+<h2> Documentation <h2>
  
 [vaatimusmäärittely](dokumentaatio/vaatismusmaarittely.md)
 
