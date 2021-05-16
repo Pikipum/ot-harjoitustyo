@@ -15,4 +15,4 @@ class TestMovepiece(unittest.TestCase):
         grid = fill_board.fill(board_grid, 8)
 
     def test_board_exists(self):
-        self.assertEqual(can_move(grid, 1, 1, 2, 1), True)
+        self.assertEqual(move_piece.can_move(grid, 1, 1, 2, 1), True)
