@@ -9,7 +9,7 @@
 | 27.04 | 4    | peli piirtää nappulat tilanteen mukaan | 
 | 04.05 | 4    | shakkinappuloiden siirtely, poetry asentaminen | 
 | 07.05 | 2    | sääntöjen ohjelmointi |
-| 16.05 | 8    | sääntöjen ohjelmointi, dokumentaation parantelu, testien laatiminen |
+| 16.05 | 8    | sääntöjen ohjelmointi, dokumentaation parantelu, testien laatiminen ja parantelu |
 
 
 Kokonaisaika: 26h
