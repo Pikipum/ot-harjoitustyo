@@ -11,7 +11,7 @@ screen = pygame.display.set_mode(size)
 
 class TestMovepiece(unittest.TestCase):
     def setUp(self):
-        board_grid = [[0 for x in range(0, 8h)] for y in range(0, 8)]
+        board_grid = [[0 for x in range(0, 8)] for y in range(0, 8)]
         grid = fill_board.fill(board_grid, 8)
 
     def test_board_exists(self):
