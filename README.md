@@ -30,15 +30,8 @@ Run pylint tests with:
 poetry run invoke lint
 ```
 
-To be done:
+<h2> How to play: </h2>
 
-Program the rules
+White starts the game. To make a move, click a piece, and drag it to the desired locating by holding down the mouse button, and releasing it at the destination. More information about the rules can be read from here: [Chess rules](https://en.wikipedia.org/wiki/Rules_of_chess)
 
-Add player turns
-
-Add unique art to each piece
-
-Add functionality to save a game
-
-Add a main menu and settings
 
