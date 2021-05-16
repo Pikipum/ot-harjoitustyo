@@ -17,9 +17,9 @@ Install dependencies with:
 ```
 poetry install
 ```
-Use poetry to build the program
+Enter a poetry shell in the ot_harjoitustyo folder
 ```
-poetry run invoke build
+poetry shell
 ```
 
 **Run the program with:**
