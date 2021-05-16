@@ -28,7 +28,10 @@ def can_move(board_grid, selected_pos_x, selected_pos_y, destination_pos_x, dest
             else:
                 return False
         elif name == "WKn":
-            return True
+            if abs(selected_pos_y - destination_pos_y) == 1 and abs(selected_pos_x - destination_pos_x) == 2:
+                return True
+            if abs(selected_pos_y - destination_pos_y) == 2 and abs(selected_pos_x - destination_pos_x) == 1:
+                return True
         elif name == "WR":
             if selected_pos_x == destination_pos_x or selected_pos_y == destination_pos_y:
                 return True
@@ -72,7 +75,8 @@ def can_move(board_grid, selected_pos_x, selected_pos_y, destination_pos_x, dest
                 return True
             else:
                 return False
-        elif name == "BKn":
-            return True
-        else:
-            return False
+        elif name == "BKn":           
+            if abs(selected_pos_y - destination_pos_y) == 1 and abs(selected_pos_x - destination_pos_x) == 2:
+                return True
+            if abs(selected_pos_y - destination_pos_y) == 2 and abs(selected_pos_x - destination_pos_x) == 1:
+                return True
