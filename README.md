@@ -10,8 +10,17 @@ This is a simple chess game. Users can play against themselves, or invite a frie
 
  
 <h2> Instructions: </h2>
+Install dependencies with:
 
-Run the program with:
+```
+poetry install
+```
+Use poetry to build the program
+```
+poetry run invoke build
+```
+
+**Run the program with:**
 ```
 poetry run invoke start
 ```
