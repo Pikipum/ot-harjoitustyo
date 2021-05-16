@@ -1,5 +1,10 @@
 import unittest
 from piece import Piece
+import pygame
+
+size = (600, 600)
+
+screen = pygame.display.set_mode(size)
 
 class TestPiece(unittest.TestCase):
     def setUp(self):
