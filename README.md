@@ -8,6 +8,8 @@ This is a simple chess game. Users can play against themselves, or invite a frie
 
 [tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
 
+[arkkitehtuurikuvaus](dokumentaatio/arkkitehtuurikuvaus.md)
+
  
 <h2> Instructions: </h2>
 Install dependencies with:
