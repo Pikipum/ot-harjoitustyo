@@ -1,9 +1,8 @@
-<h1>Chess game.</h1>
+<h1>Chess game</h1>
 
+This is a simple chess game. Users can play against themselves, or invite a friend over for a local game. To learn the rules of the game, click the link below. 
 
-
-
-<h2> I am building a simple chess game. Look at the following links for more information. <h2>
+<h2> Documentation <h2>
  
 [vaatimusmäärittely](dokumentaatio/vaatismusmaarittely.md)
 
@@ -11,8 +10,17 @@
 
  
 <h2> Instructions: </h2>
+Install dependencies with:
 
-Run the program with:
+```
+poetry install
+```
+Use poetry to build the program
+```
+poetry run invoke build
+```
+
+**Run the program with:**
 ```
 poetry run invoke start
 ```
@@ -30,15 +38,8 @@ Run pylint tests with:
 poetry run invoke lint
 ```
 
-To be done:
+<h2> How to play: </h2>
 
-Program the rules
+White starts the game. To make a move, click a piece, and drag it to the desired locating by holding down the mouse button, and releasing it at the destination. More information about the rules can be read from here: [Chess rules](https://en.wikipedia.org/wiki/Rules_of_chess)
 
-Add player turns
-
-Add unique art to each piece
-
-Add functionality to save a game
-
-Add a main menu and settings
 
