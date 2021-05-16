@@ -27,7 +27,7 @@ poetry shell
 poetry run invoke start
 ```
 
-Run the tests with:
+To run tests, move to the src folder and run the tests with:
 ```
 poetry run invoke test
 ```
