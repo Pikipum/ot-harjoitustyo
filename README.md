@@ -13,3 +13,5 @@ hello
 [komentorivi.txt](https://github.com/Pikipum/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
 !
+
+!!
