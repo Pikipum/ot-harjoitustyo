@@ -1,0 +1,5 @@
+.pytest_cache
+___pycache___
+.coverage
+htmlcov
+laskarit/viikko2/unicafe/src/tests/__pycache__/maksukortti_test.cpython-38-pytest-7.2.0.pyc
