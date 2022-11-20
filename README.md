@@ -18,6 +18,6 @@ hello
 
 # Viikko 2
 
-[vaatimusmaarittely.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+[vaatimusmaarittely.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/pychat/dokumentaatio/vaatimusmaarittely.md)
 
-[tyokirjanpito.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/dokumentaatio/tyokirjanpito.md)
+[tyokirjanpito.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/pychat/dokumentaatio/tyokirjanpito.md)
