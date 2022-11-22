@@ -6,6 +6,3 @@ class User:
         self.name = name
         self.msghistory = msghistory
         self.password = password
-
-    def get_password():
-        return self.password
