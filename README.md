@@ -20,8 +20,8 @@ hello
 
 [vaatimusmaarittely.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/pychat/dokumentaatio/vaatimusmaarittely.md)
 
-[tyokirjanpito.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/dokumentaatio/tyokirjanpito.md)
+[tyokirjanpito.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/pychat/dokumentaatio/tyokirjanpito.md)
 
 # Viikko 3
 
-[changelog.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+[changelog.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/pychat/dokumentaatio/changelog.md)
