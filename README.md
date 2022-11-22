@@ -21,3 +21,7 @@ hello
 [vaatimusmaarittely.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
 [tyokirjanpito.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/dokumentaatio/tyokirjanpito.md)
+
+# Viikko 3
+
+[changelog.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
