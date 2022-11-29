@@ -1,13 +1,13 @@
 import tkinter
 from user import User
-#from ui.ui import UI
-
 
 users = {}
 messages = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
 
+
 class InvalidLoginError(Exception):
     pass
+
 
 def username_exists(username):
     if username in users:
@@ -44,6 +44,7 @@ def create_account(username, password):
             "Create account", "Account created succesfully")
         return 1
     tkinter.messagebox.showinfo("Create account", "Username already exists")
+    return 0
 
 
 def send_message(message):
