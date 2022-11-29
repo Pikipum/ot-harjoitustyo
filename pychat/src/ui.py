@@ -1,6 +1,7 @@
 from tkinter import Tk
 from loginscreen import LoginScreen
 
+
 class UI:
     def __init__(self, root):
         self._root = root
@@ -24,4 +25,3 @@ class UI:
         )
 
         self._current_view.pack()
-
