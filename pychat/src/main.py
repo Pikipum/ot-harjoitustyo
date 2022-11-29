@@ -10,7 +10,7 @@ from tkinter import messagebox
 window = tkinter.Tk()
 window.title("PyChat")
 
-# Users are stored in a dictionary. Their username returns the User object
+# Users are stored in a dictionary. Their username is they key which returns the User object
 users = {}
 
 # Create a new user and add it to the dictionary of users
@@ -24,8 +24,15 @@ def check_log_in(username, password):
     if password == users[username].password:
         tkinter.messagebox.showinfo( "Log in", "Log in succesful")
         return 1
-    tkinter.messagebox.showinfo( "Log in", "Wrong password")
-    return 0
+    tkinter.messagebox.showinfo( "Log in", "Wrong username or password")
+
+# Check if username is already in users dictionary. If not, then add it.
+def create_account(username, password):
+    if not username.get() in users:
+        add_user(username.get(), password.get())
+        tkinter.messagebox.showinfo( "Create account", "Account created succesfully")
+        return 1
+    tkinter.messagebox.showinfo( "Create account", "Username already exists")
 
 # Box to type in username
 usernameLabel = Label(window, text="User Name").grid(row=0, column=0)
@@ -38,10 +45,12 @@ pw = StringVar()
 pwEntry = Entry(window, textvariable=pw, show="*").grid(row=1, column=1)  
 
 check_log_in = partial(check_log_in, username, pw)
+create_account = partial(create_account, username, pw)
 
-log_in = tkinter.Button(window, text ="Log in", command = check_log_in).grid(row=4, column=0) 
+log_in_button = tkinter.Button(window, text ="Log in", command = check_log_in).grid(row=4, column=0) 
+create_account_button = tkinter.Button(window, text ="Create account", command = create_account).grid(row=4, column=1) 
 
-# Test user, username: a, password: b
-add_user("a", "b")
+# Test user, username: admin, password: root
+add_user("admin", "root")
 
 window.mainloop()
