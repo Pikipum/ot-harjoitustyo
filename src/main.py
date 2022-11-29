@@ -7,6 +7,7 @@ from tkinter import Tk, ttk
 from functools import partial
 from tkinter import messagebox
 
+
 def main():
     window = tkinter.Tk()
     window.title("PyChat")

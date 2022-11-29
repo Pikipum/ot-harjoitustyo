@@ -3,6 +3,7 @@ from user import User
 
 
 users = {}
+messages = []
 
 def username_exists(username):
     if username in users:
@@ -35,6 +36,9 @@ def create_account(username, password):
         return 1
     tkinter.messagebox.showinfo("Create account", "Username already exists")
 
+def send_message(message):
+    messages.append(message.get())
+    print(messages)
 
 # Test user, username: admin, password: root
 add_user("admin", "root")

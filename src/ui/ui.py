@@ -1,5 +1,6 @@
 from tkinter import Tk
 from ui.loginscreen import LoginScreen
+from ui.chatscreen import ChatScreen
 
 
 class UI:
@@ -8,7 +9,7 @@ class UI:
         self._current_view = None
 
     def start(self):
-        self._show_login_screen()
+        self._show_chat_screen()
 
     def _hide_current_view(self):
         if self._current_view:
@@ -20,6 +21,14 @@ class UI:
         self._hide_current_view()
 
         self._current_view = LoginScreen(
+            self._root)
+
+        self._current_view.pack()
+
+    def _show_chat_screen(self):
+        self._hide_current_view()
+
+        self._current_view = ChatScreen(
             self._root)
 
         self._current_view.pack()

@@ -39,7 +39,6 @@ class LoginScreen:
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
-        # label = ttk.Label(master=self._frame, text="Log in:")
 
         password = StringVar()
         username = StringVar()
