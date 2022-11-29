@@ -1,4 +1,4 @@
-import tkinter
+from tkinter import messagebox
 from user import User
 
 users = {}
@@ -27,10 +27,10 @@ def check_log_in(username, password):
     username = username.get()
     password = password.get()
     if not username_exists(username):
-        tkinter.messagebox.showinfo("Log in", "Wrong username or password")
+        messagebox.showinfo("Log in", "Wrong username or password")
         return 0
     if password == users[username].password:
-        tkinter.messagebox.showinfo("Log in", "Log in succesful")
+        messagebox.showinfo("Log in", "Log in succesful")
         return 1
 
 
@@ -40,10 +40,10 @@ def check_log_in(username, password):
 def create_account(username, password):
     if not username.get() in users:
         add_user(username.get(), password.get())
-        tkinter.messagebox.showinfo(
+        messagebox.showinfo(
             "Create account", "Account created succesfully")
         return 1
-    tkinter.messagebox.showinfo("Create account", "Username already exists")
+    messagebox.showinfo("Create account", "Username already exists")
     return 0
 
 
