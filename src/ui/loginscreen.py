@@ -41,10 +41,10 @@ class LoginScreen:
 
     def _login_handler(self, username, password):
         try:
-            check_log_in(username, password)
-            self._handle_login(username.get())
+            if check_log_in(username, password):
+                self._handle_login(username.get())
         except InvalidLoginError:
-            self._show_error("Wrong username and/or password")
+            return 0
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
