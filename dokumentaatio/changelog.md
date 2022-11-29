@@ -10,3 +10,6 @@
 - Added functionality to create new account
 - Created separate subfolders for UI windows
 - Added chat window UI
+- Added login handler
+- UI can switch to chat after succcesful login
+- Added poetry tests
