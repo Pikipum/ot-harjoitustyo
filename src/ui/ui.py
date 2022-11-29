@@ -9,7 +9,7 @@ class UI:
         self._current_view = None
 
     def start(self):
-        self._show_chat_screen()
+        self._show_login_screen()
 
     def _hide_current_view(self):
         if self._current_view:
@@ -25,10 +25,10 @@ class UI:
 
         self._current_view.pack()
 
-    def _show_chat_screen(self):
+    def _show_chat_screen(self, current_user):
         self._hide_current_view()
 
         self._current_view = ChatScreen(
-            self._root)
+            self._root, current_user)
 
         self._current_view.pack()

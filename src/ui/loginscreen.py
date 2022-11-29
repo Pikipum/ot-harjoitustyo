@@ -2,6 +2,7 @@ import tkinter
 from functools import partial
 from tkinter import Button, Entry, Label, StringVar, constants, ttk
 from services import chat_services
+#from ui import UI
 
 
 class LoginScreen:
@@ -37,6 +38,10 @@ class LoginScreen:
         password_label.grid(padx=5, pady=5, sticky=constants.W)
         self._password_entry.grid(padx=5, pady=5, sticky=constants.EW)
 
+    def _login_handler(self, username, password):
+        if chat_services.check_log_in(username, password) == 1:
+            return None
+
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
 
@@ -47,7 +52,7 @@ class LoginScreen:
         self._initialize_password_field(password)
 
         check_log_in_partial = partial(
-            chat_services.check_log_in, username, password)
+            self._login_handler, username, password)
         create_account_partial = partial(
             chat_services.create_account, username, password)
 
