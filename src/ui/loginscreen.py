@@ -1,14 +1,15 @@
 import tkinter
 from functools import partial
 from tkinter import Button, Entry, Label, StringVar, constants, ttk
-from services import chat_services
+from services.chat_services import check_log_in, create_account, InvalidLoginError
 #from ui import UI
 
 
 class LoginScreen:
-    def __init__(self, root):
+    def __init__(self, root, handle_login):
         self._root = root
         self._frame = None
+        self._handle_login = handle_login
 
         self._initialize()
 
@@ -39,8 +40,11 @@ class LoginScreen:
         self._password_entry.grid(padx=5, pady=5, sticky=constants.EW)
 
     def _login_handler(self, username, password):
-        if chat_services.check_log_in(username, password) == 1:
-            return None
+        try:
+            check_log_in(username, password)
+            self._handle_login(username.get())
+        except InvalidLoginError:
+            self._show_error("Wrong username and/or password")
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
@@ -54,7 +58,7 @@ class LoginScreen:
         check_log_in_partial = partial(
             self._login_handler, username, password)
         create_account_partial = partial(
-            chat_services.create_account, username, password)
+            create_account, username, password)
 
         self._frame.grid_columnconfigure(0, weight=1, minsize=400)
 

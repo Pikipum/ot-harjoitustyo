@@ -20,15 +20,14 @@ class UI:
     def _show_login_screen(self):
         self._hide_current_view()
 
-        self._current_view = LoginScreen(
-            self._root)
+        self._current_view = LoginScreen(self._root, self._show_chat_screen)
 
         self._current_view.pack()
 
-    def _show_chat_screen(self, current_user):
+    def _show_chat_screen(self, username):
         self._hide_current_view()
-
         self._current_view = ChatScreen(
-            self._root, current_user)
+            self._root,
+            username)
 
         self._current_view.pack()
