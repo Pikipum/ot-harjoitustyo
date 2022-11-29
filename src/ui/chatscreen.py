@@ -9,7 +9,6 @@ class ChatScreen:
         self._root = root
         self._frame = None
         self.messages = chat_services.messages
-        self.r = 0
         self._initialize()
         self.current_user = current_user
 
