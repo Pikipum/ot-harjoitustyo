@@ -1,7 +1,7 @@
 import tkinter
-from tkinter import ttk, constants, StringVar, Label, Button, Entry
 from functools import partial
-from services.chat_services import chat_services
+from tkinter import Button, Entry, Label, StringVar, constants, ttk
+from services import chat_services
 
 
 class LoginScreen:

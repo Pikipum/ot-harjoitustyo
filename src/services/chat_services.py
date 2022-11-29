@@ -4,6 +4,11 @@ from user import User
 
 users = {}
 
+def username_exists(username):
+    if username in users:
+        return True
+    return False
+
 # Create a new user and add it to the dictionary of users
 def add_user(name, password):
     users[name] = User(name, [], password)
@@ -14,14 +19,14 @@ def add_user(name, password):
 def check_log_in(username, password):
     username = username.get()
     password = password.get()
+    if not username_exists(username):
+        tkinter.messagebox.showinfo("Log in", "Wrong username or password")
+        return 0
     if password == users[username].password:
         tkinter.messagebox.showinfo("Log in", "Log in succesful")
         return 1
-    tkinter.messagebox.showinfo("Log in", "Wrong username or password")
 
 # Check if username is already in users dictionary. If not, then add it.
-
-
 def create_account(username, password):
     if not username.get() in users:
         add_user(username.get(), password.get())

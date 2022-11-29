@@ -7,10 +7,6 @@ from tkinter import Tk, ttk
 from functools import partial
 from tkinter import messagebox
 
-
-# Users are stored in a dictionary. Their username is they key which returns the User object
-users = {}
-
 def main():
     window = tkinter.Tk()
     window.title("PyChat")
@@ -19,6 +15,7 @@ def main():
     ui_view.start()
 
     window.mainloop()
+
 
 if __name__ == "__main__":
     main()
