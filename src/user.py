@@ -7,3 +7,6 @@ class User:
         self.name = name
         self.msghistory = msghistory
         self.password = password
+
+    def __str__(self):
+        return self.name
