@@ -47,17 +47,17 @@ class LoginScreen:
         self._initialize_username_field(username)
         self._initialize_password_field(password)
 
-        check_log_in = partial(chat_services.check_log_in, username, password)
-        create_account = partial(
+        check_log_in_partial = partial(
+            chat_services.check_log_in, username, password)
+        create_account_partial = partial(
             chat_services.create_account, username, password)
 
         self._frame.grid_columnconfigure(0, weight=1, minsize=400)
 
         log_in_button = tkinter.Button(
-            master=self._frame, text="Log in", command=check_log_in)
+            master=self._frame, text="Log in", command=check_log_in_partial)
         create_account_button = tkinter.Button(
-            master=self._frame, text="Create account", command=create_account)
+            master=self._frame, text="Create account", command=create_account_partial)
 
         log_in_button.grid(padx=5, pady=5, sticky=constants.EW)
         create_account_button.grid(padx=5, pady=5, sticky=constants.EW)
-

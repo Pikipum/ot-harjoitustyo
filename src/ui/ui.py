@@ -1,5 +1,5 @@
 from tkinter import Tk
-from loginscreen import LoginScreen
+from ui.loginscreen import LoginScreen
 
 
 class UI:

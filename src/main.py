@@ -1,6 +1,6 @@
 from user import User
 from chat_message import Message
-from ui import UI
+from ui.ui import UI
 import tkinter
 from tkinter import *
 from tkinter import Tk, ttk
