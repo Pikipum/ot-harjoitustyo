@@ -20,8 +20,6 @@ class UI:
         self._hide_current_view()
 
         self._current_view = LoginScreen(
-            self._root,
-            self._handle_login
-        )
+            self._root)
 
         self._current_view.pack()
