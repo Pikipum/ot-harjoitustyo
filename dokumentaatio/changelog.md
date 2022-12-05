@@ -13,3 +13,7 @@
 - Added login handler
 - UI can switch to chat after succcesful login
 - Added poetry tests
+
+## Week 5
+
+- Added more tests

@@ -6,4 +6,5 @@
 | 20.11 | 1.5  | perus ui:n luominen, luokat, testit, poetry |
 | 22.11 | 2    | testikäyttäjä, kirjautumisruutu ja salasanan tarkistus, poetry |
 | 29.11 | 5    | ui kehitys, chat-ikkuna, login handler, ui osaa vaihtaa chattiruutuun, poetry testit |
-| yht   | 9  | | 
+| 05.12 | 1.5  | lisää testejä |
+| yht   | 10.5 | | 
