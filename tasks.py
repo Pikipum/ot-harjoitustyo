@@ -9,6 +9,10 @@ def test(ctx):
     ctx.run("pytest src", pty=True)
 
 @task
+def test_chat_services(ctx):
+    ctx.run("pytest src/services/chat_services.py", pty=True)
+
+@task
 def format(ctx):
     ctx.run("autopep8 --in-place --recursive src", pty=True)
 

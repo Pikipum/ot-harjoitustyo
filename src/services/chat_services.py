@@ -24,31 +24,39 @@ def add_user(name, password):
 
 
 def check_log_in(username, password):
-    username = username.get()
-    password = password.get()
+    if not isinstance(username, str):
+        username = username.get()
+        password = password.get()
     if not username_exists(username):
-        messagebox.showinfo("Log in", "Wrong username or password")
+        #messagebox.showinfo("Log in", "Wrong username or password")
         return 0
     if password == users[username].password:
-        messagebox.showinfo("Log in", "Log in succesful")
+        #messagebox.showinfo("Log in", "Log in succesful")
         return 1
+    return 0
 
 
 # Check if username is already in users dictionary. If not, then add it.
 
 
 def create_account(username, password):
-    if not username.get() in users:
-        add_user(username.get(), password.get())
-        messagebox.showinfo(
-            "Create account", "Account created succesfully")
+    if not isinstance(username, str):
+        username = username.get()
+        password = password.get()
+    if not username in users:
+        add_user(username, password)
+        #messagebox.showinfo(
+        #    "Create account", "Account created succesfully")
         return 1
-    messagebox.showinfo("Create account", "Username already exists")
+    #messagebox.showinfo("Create account", "Username already exists")
     return 0
 
 
 def send_message(message):
-    messages.append(message.get())
+    if not isinstance(message, str):
+        message = message.get()
+    messages.append(message)
+    return 1
 
 
 # Test user, username: admin, password: root

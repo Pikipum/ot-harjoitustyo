@@ -7,24 +7,20 @@ from services.chat_services import check_log_in, add_user, create_account, send_
 class TestChatServices(unittest.TestCase):
     def setUp(self):
         add_user("name", "password")
-        self.name = StringVar()
-        self.password = StringVar()
-
-        self.name_entry = Entry(self, textvariable=self.name)
-        self.password_entry = Entry(self, textvariable=self.password)
 
     def test_check_login_works(self):
 
-        self.assertEqual(check_log_in(self.name_entry, self.password_entry), True)
+        self.assertEqual(check_log_in("name", "password"), True)
 
     def test_add_user(self):
-        self.assertEqual(str(chat_services.add_user), True)
+        add_user("name2", "a")
+        self.assertEqual(username_exists("name2"), True)
 
     def test_create_account(self):
-        self.assertEqual(str(chat_services.create_account), True)
+        self.assertEqual(create_account("name3", "b"), True)
 
     def test_send_message(self):
-        self.assertEqual(str(chat_services.send_message), True)
+        self.assertEqual(send_message("224565"), True)
 
     def test_username_exists(self):
-        self.assertEqual(str(chat_services.username_exists), True)
+        self.assertEqual(username_exists("name"), True)
