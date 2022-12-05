@@ -8,11 +8,11 @@ Sovellus on testattu toimivaksi Python 3.8 ja 3.10 -versiolla.
 
 ## Dokumentaatio
 
-[vaatimusmaarittely.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/pychat/dokumentaatio/vaatimusmaarittely.md)
+[vaatimusmaarittely.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
-[tyokirjanpito.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/pychat/dokumentaatio/tyokirjanpito.md)
+[tyokirjanpito.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/dokumentaatio/tyokirjanpito.md)
 
-[changelog.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/pychat/dokumentaatio/changelog.md)
+[changelog.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
 ## Asennus
 
