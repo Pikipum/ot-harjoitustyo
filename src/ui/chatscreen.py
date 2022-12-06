@@ -32,19 +32,21 @@ class ChatScreen:
         offset = 2
         rows = 10
 
+        message_count = len(self.messages)
+    
         for i in range(1, rows):
-            msg = self.messages[-i]
+            msg = self.messages.get(message_count-i)
             tkinter.Label(self._frame, anchor=tkinter.W, text=msg).grid(
                 row=i+offset, sticky=tkinter.W)
 
-    def refresh(self):
+    def _refresh(self):
         self.destroy()
         self._initialize()
         self.pack()
 
     def _message_handler(self, msg):
         chat_services.send_message(msg)
-        self.refresh()
+        self._refresh()
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)

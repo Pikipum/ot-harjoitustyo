@@ -40,11 +40,16 @@ class LoginScreen:
         self._password_entry.grid(padx=5, pady=5, sticky=constants.EW)
 
     def _login_handler(self, username, password):
-        try:
-            if check_log_in(username, password):
-                self._handle_login(username.get())
-        except InvalidLoginError:
-            return 0
+        if check_log_in(username, password):
+            self._handle_login(username.get())
+        else:
+            tkinter.messagebox.showinfo("Error", "Wrong username or password")
+
+    def _account_create_handler(self, username, password):
+        if create_account(username, password):
+            tkinter.messagebox.showinfo("Success", "Account created")
+        else:
+            tkinter.messagebox.showinfo("Error", "Username already taken")
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
@@ -58,7 +63,7 @@ class LoginScreen:
         check_log_in_partial = partial(
             self._login_handler, username, password)
         create_account_partial = partial(
-            create_account, username, password)
+            self._account_create_handler, username, password)
 
         self._frame.grid_columnconfigure(0, weight=1, minsize=400)
 
