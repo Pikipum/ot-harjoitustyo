@@ -1,15 +1,7 @@
-from tkinter import messagebox
-from user import User
 from services.dataparser import get_accounts, get_messages, save_to_file, save_accounts
-
 
 users = get_accounts()
 messages = get_messages()
-#messages = messages.get("MESSAGES")
-
-
-class InvalidLoginError(Exception):
-    pass
 
 
 def username_exists(username):

@@ -1,6 +1,5 @@
-import tkinter
 from functools import partial
-from tkinter import Button, Entry, Label, StringVar, constants, ttk
+from tkinter import Button, Entry, Label, StringVar, constants, Frame
 from services import chat_services
 
 
@@ -18,26 +17,25 @@ class ChatScreen:
     def destroy(self):
         self._frame.destroy()
 
-    def _initialize_message_field(self, input):
-        message_label = ttk.Label(master=self._frame, text="Type message: ")
+    def _initialize_message_field(self, user_input):
+        message_label = Label(master=self._frame, text="Type message: ")
 
-        message = input
-        self._message_label_entry = ttk.Entry(
-            master=self._frame, textvariable=message)
+        message_label_entry = Entry(
+            master=self._frame, textvariable=user_input)
 
         message_label.grid(padx=5, pady=5, sticky=constants.W)
-        self._message_label_entry.grid(padx=5, pady=5, sticky=constants.EW)
+        message_label_entry.grid(padx=5, pady=5, sticky=constants.EW)
 
     def _initialize_message_history(self):
         offset = 2
         rows = 10
 
         message_count = len(self.messages)
-    
+
         for i in range(1, rows):
             msg = self.messages.get(message_count-i)
-            tkinter.Label(self._frame, anchor=tkinter.W, text=msg).grid(
-                row=i+offset, sticky=tkinter.W)
+            Label(self._frame, anchor=constants.W, text=msg).grid(
+                row=i+offset, sticky=constants.W)
 
     def _refresh(self):
         self.destroy()
@@ -49,7 +47,7 @@ class ChatScreen:
         self._refresh()
 
     def _initialize(self):
-        self._frame = ttk.Frame(master=self._root)
+        self._frame = Frame(master=self._root)
 
         message = StringVar()
 
@@ -62,7 +60,7 @@ class ChatScreen:
         self._frame.grid_rowconfigure(0, weight=1)
         self._frame.grid_columnconfigure(0, weight=1)
 
-        send_button = tkinter.Button(
+        send_button = Button(
             master=self._frame, text="Send", command=send_message_partial)
 
         send_button.grid(padx=5, pady=5, sticky=constants.EW)

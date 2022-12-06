@@ -1,8 +1,6 @@
-import tkinter
 from functools import partial
-from tkinter import Button, Entry, Label, StringVar, constants, ttk
-from services.chat_services import check_log_in, create_account, InvalidLoginError
-#from ui import UI
+from tkinter import Button, Entry, Label, StringVar, constants, messagebox, Frame
+from services.chat_services import check_log_in, create_account
 
 
 class LoginScreen:
@@ -19,40 +17,37 @@ class LoginScreen:
     def destroy(self):
         self._frame.destroy()
 
-    def _initialize_username_field(self, input):
-        username_label = ttk.Label(master=self._frame, text="User name")
-
-        username = input
-        self._username_entry = ttk.Entry(
-            master=self._frame, textvariable=username)
+    def _initialize_username_field(self, user_input):
+        username_label = Label(master=self._frame, text="User name")
+        username_entry = Entry(
+            master=self._frame, textvariable=user_input)
 
         username_label.grid(padx=5, pady=5, sticky=constants.W)
-        self._username_entry.grid(padx=5, pady=5, sticky=constants.EW)
+        username_entry.grid(padx=5, pady=5, sticky=constants.EW)
 
-    def _initialize_password_field(self, input):
-        password_label = ttk.Label(master=self._frame, text="Password")
+    def _initialize_password_field(self, user_input):
+        password_label = Label(master=self._frame, text="Password")
 
-        password = input
-        self._password_entry = ttk.Entry(
-            master=self._frame, textvariable=password, show="*")
+        password_entry = Entry(
+            master=self._frame, textvariable=user_input, show="*")
 
         password_label.grid(padx=5, pady=5, sticky=constants.W)
-        self._password_entry.grid(padx=5, pady=5, sticky=constants.EW)
+        password_entry.grid(padx=5, pady=5, sticky=constants.EW)
 
     def _login_handler(self, username, password):
         if check_log_in(username, password):
             self._handle_login(username.get())
         else:
-            tkinter.messagebox.showinfo("Error", "Wrong username or password")
+            messagebox.showinfo("Error", "Wrong username or password")
 
     def _account_create_handler(self, username, password):
         if create_account(username, password):
-            tkinter.messagebox.showinfo("Success", "Account created")
+            messagebox.showinfo("Success", "Account created")
         else:
-            tkinter.messagebox.showinfo("Error", "Username already taken")
+            messagebox.showinfo("Error", "Username already taken")
 
     def _initialize(self):
-        self._frame = ttk.Frame(master=self._root)
+        self._frame = Frame(master=self._root)
 
         password = StringVar()
         username = StringVar()
@@ -67,9 +62,9 @@ class LoginScreen:
 
         self._frame.grid_columnconfigure(0, weight=1, minsize=400)
 
-        log_in_button = tkinter.Button(
+        log_in_button = Button(
             master=self._frame, text="Log in", command=check_log_in_partial)
-        create_account_button = tkinter.Button(
+        create_account_button = Button(
             master=self._frame, text="Create account", command=create_account_partial)
 
         log_in_button.grid(padx=5, pady=5, sticky=constants.EW)

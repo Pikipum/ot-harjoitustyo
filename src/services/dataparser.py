@@ -16,5 +16,6 @@ def get_messages():
 def save_to_file(messages):
     messages.to_json(MSGHISTORY_FILE_PATH)
 
+
 def save_accounts(accounts):
     accounts.to_json(ACCOUNTS_FILE_PATH)
