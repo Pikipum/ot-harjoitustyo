@@ -12,6 +12,8 @@ Käyttäliittymään kuuluu kaksi näkymää:
 - Kirjautumisruutu, jossa voi syöttää tunnuksen ja salasanan tai luoda tilin
 - Chat-ikkuna, jossa kirjautumisen jälkeen voi lukea vanhoja viestejä ja kirjoittaa uusia.
 
+Näiden lisäksi sovelluksessa on erilaisia ponnahdusikkonoita esimerkiksi tilanteeseen, jossa salasana on väärin.
+
 Nämä ovat toteutettu omiin UI-luokkiinsa, jotka lähettävät tietoa _chatservices_ palvelulle.
 
 Kun käyttäjä kirjautuu, hän pääsee chat-näkymään.
