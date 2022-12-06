@@ -8,4 +8,4 @@ class Message:
         self.user = user
 
     def __str__(self):
-        return self.msg
+        return self.msgid
