@@ -20,23 +20,23 @@ Jos kirjautuminen onnistuu, käyttäjä pääsee chat-ikkunaan, jossa voi lukea 
 
 ### Ennen kirjautumista
 
-Kaksi kenttää ja kaksi nappia:
+Kaksi kenttää ja kaksi nappia: [TEHTY]
 
-Kentät: Tunnus ja salasana
-Napit: Kirjaudu ja Luo tunnus
+Kentät: Tunnus ja salasana [TEHTY]
+Napit: Kirjaudu ja Luo tunnus [TEHTY]
 
-Luo tunnus:
-- Käyttäjätunnuksen luominen ja salasanan valitseminen
+Luo tunnus: [TEHTY]
+- Käyttäjätunnuksen luominen ja salasanan valitseminen [TEHTY]
 
 tai
 
-- Käyttäjä voi kirjautua järjestelmään
-    - Jos tunnus ja salasana löytyy tietokannasta, käyttäjä pääsee chat-näkymään.
+- Käyttäjä voi kirjautua järjestelmään [TEHTY]
+    - Jos tunnus ja salasana löytyy tietokannasta, käyttäjä pääsee chat-näkymään. [TEHTY]
 
 ### Kirjautumisen jälkeen
 
-- Käyttäjä voi lukea vanhoja viestejä joita on lähetetty.
-- Ruudun alaosassa tyhjä kenttä, johon kirjottamalla ja painamalla enteriä viesti lähtee muille nähtäväksi.
+- Käyttäjä voi lukea vanhoja viestejä joita on lähetetty. [TEHTY]
+- Ruudun alaosassa tyhjä kenttä, johon kirjottamalla ja painamalla enteriä viesti lähtee muille nähtäväksi. [TEHTY]
 
 ## Jatkokehitysideoita
 

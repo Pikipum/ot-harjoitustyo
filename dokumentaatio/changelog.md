@@ -17,3 +17,5 @@
 ## Week 5
 
 - Added more tests
+- Accounts saved to json file
+- Message history saved to json file
