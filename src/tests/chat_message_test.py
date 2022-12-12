@@ -1,5 +1,5 @@
 import unittest
-from chat_message import Message
+from entities.chat_message import Message
 
 
 class TestMessage(unittest.TestCase):
