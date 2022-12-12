@@ -10,6 +10,8 @@ Sovellus on testattu toimivaksi Python 3.8 ja 3.10 -versiolla.
 
 [vaatimusmaarittely.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
+[arkkitehtuuri.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
 [tyokirjanpito.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/dokumentaatio/tyokirjanpito.md)
 
 [changelog.md](https://github.com/Pikipum/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
