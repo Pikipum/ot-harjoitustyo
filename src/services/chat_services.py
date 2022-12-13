@@ -1,11 +1,6 @@
 import time
 from services.dataparser import get_accounts, get_messages, save_to_file, save_accounts
 
-#users = get_accounts()
-#messages = get_messages()
-
-#current_user = None
-
 
 class ChatService:
     """Sovelluslogiikasta vastaava luokka"""
@@ -24,14 +19,14 @@ class ChatService:
         """
         return time.strftime("%H:%M", self._time)
 
-    def stringvar_to_string(self, s):
+    def stringvar_to_string(self, input_str):
         """
         Tarkistaa, onko syötetty arvo string vai StringVar.
         Palauttaa syötteen tavallisenä merkkijonona
         """
-        if not isinstance(s, str):
-            return s.get()
-        return s
+        if not isinstance(input_str, str):
+            return input_str.get()
+        return input_str
 
     def username_exists(self, username):
         """
@@ -78,7 +73,7 @@ class ChatService:
 
     def send_message(self, message):
         """
-        Muuttaa syötteen merkkijonoksi, lisää sen messages-listan loppuun ja pyytää 
+        Muuttaa syötteen merkkijonoksi, lisää sen messages-listan loppuun ja pyytää
         dataparseria tallentamaan päivitetyn historian .jsoniin
         """
         message = self.stringvar_to_string(message)
