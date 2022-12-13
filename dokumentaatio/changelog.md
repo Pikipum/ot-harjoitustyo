@@ -19,3 +19,8 @@
 - Added more tests
 - Accounts saved to json file
 - Message history saved to json file
+
+## Week 6
+
+- Added timestamps
+- Added username into messages

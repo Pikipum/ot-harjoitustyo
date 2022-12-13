@@ -1,13 +1,13 @@
 from functools import partial
 from tkinter import Button, Entry, Label, StringVar, constants, Frame
-from services import chat_services
+from services.chat_services import chat_services
 
 
 class ChatScreen:
     def __init__(self, root, current_user):
         self._root = root
         self._frame = None
-        self.messages = chat_services.messages
+        self.messages = chat_services._messages
         self._initialize()
         self.current_user = current_user
 

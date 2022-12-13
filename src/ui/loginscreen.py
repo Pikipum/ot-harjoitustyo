@@ -1,6 +1,6 @@
 from functools import partial
 from tkinter import Button, Entry, Label, StringVar, constants, messagebox, Frame
-from services.chat_services import check_log_in, create_account
+from services.chat_services import chat_services
 
 
 class LoginScreen:
@@ -35,13 +35,13 @@ class LoginScreen:
         password_entry.grid(padx=5, pady=5, sticky=constants.EW)
 
     def _login_handler(self, username, password):
-        if check_log_in(username, password):
+        if chat_services.check_log_in(username, password):
             self._handle_login(username.get())
         else:
             messagebox.showinfo("Error", "Wrong username or password")
 
     def _account_create_handler(self, username, password):
-        if create_account(username, password):
+        if chat_services.create_account(username, password):
             messagebox.showinfo("Success", "Account created")
         else:
             messagebox.showinfo("Error", "Username already taken")

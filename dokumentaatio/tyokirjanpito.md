@@ -8,4 +8,5 @@
 | 29.11 | 5    | ui kehitys, chat-ikkuna, login handler, ui osaa vaihtaa chattiruutuun, poetry testit |
 | 05.12 | 1.5  | lisää testejä |
 | 06.12 | 3    | json tiedosto viestihistorialle, testit korjatu, releasen laatiminen |
+| 13.12 | 2    | chattiviestien muotoilu: aika, nimet, current_user, chat_servicessistä luokka, docstring |
 | yht   | 13.5 | | 
